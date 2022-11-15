@@ -15,7 +15,7 @@ with open('regex_test.txt') as f:
     data = f.read()
     print(data)
 
-pattern = re.compile("^([A-Z]([a-z]+|.)\s*){2,3}$")
+pattern = re.compile(r"^([A-Z]([a-z]+|.)\s*){2,3}$")    
 match = pattern.findall(data)
 
 print(match)
