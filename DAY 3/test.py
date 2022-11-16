@@ -9,13 +9,13 @@
 #     for i in sentence:
 #         if i.
 
-import re
+# import re
 
-with open('regex_test.txt') as f:
-    data = f.read()
-    print(data)
+# with open('regex_test.txt') as f:
+#     data = f.read()
+#     print(data)
 
-pattern = re.compile(r"^([A-Z]([a-z]+|.)\s*){2,3}$")    
-match = pattern.findall(data)
+# pattern = re.compile(r"^([A-Z]([a-z]+|.)\s*){2,3}$")    
+# match = pattern.findall(data)
 
-print(match)
+# print(match)
