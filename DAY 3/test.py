@@ -19,3 +19,28 @@
 # match = pattern.findall(data)
 
 # print(match)
+
+
+# Week 3: Day 3 - Whiteboard
+
+# Fizz Buzz
+# Write a function to that takes one parameter
+# If the number is divisible by 3, print 'Fizz' instead of the number
+# If the number is divisible 5, print 'Buzz' instead of the number
+# If the number is divisible by both 3 and 5, print 'FizzBuzz' instead of the number
+# Otherwise, simply print the number
+
+# def fizz_buzz(input):
+#     if input % 3 == 0 and input % 5 == 0:
+#         print("FizzBuzz")
+#         return
+#     if input % 3 == 0:
+#         print("Fizz")
+
+#     elif input % 5 == 00:
+#         print("Buzz")
+
+#     else:
+#         print(input)
+
+# fizz_buzz(22)
