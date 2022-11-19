@@ -69,7 +69,7 @@ def info_input():
 
         while True:
             try:
-                property_HOA = float(input('Please enter the mount per month of the HOA payment, if any: '))
+                property_HOA = float(input('Please enter the amount per month of the HOA payment, if any: '))
             except ValueError:
                 print("\nSorry, I didn't understand that.\n")
                 continue
@@ -159,9 +159,9 @@ def info_input():
         mcf = income - expenses
         annual_mcf = mcf * 12
         ROI = annual_mcf / total_investment
-        
-        print(f'\n\nHere is your expected RETURN ON INVESTMENT: {int(ROI*100)}%') 
-        print('Thank you for using the Thieves 105 ROI Calculator!\nGood luck with your new investment!\n')
+        print(f'\n\nHere is some useful information about your potential property and how we got to your ROI:\n\nTotal Income: ${income}\nTotal Expenses: ${expenses}\nMonthly Cash Flow: ${mcf}\nAnnual Cash Flow: ${annual_mcf}\nTotal Investment: ${total_investment}')  
+        print(f'\nHere is your expected RETURN ON INVESTMENT: {int(ROI*100)}%\n') 
+        print('\nTHANK YOU for using the THIEVES 105 ROI !\nGood luck with your new investment!\n')
         
 
 
