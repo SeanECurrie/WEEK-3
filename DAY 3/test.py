@@ -108,22 +108,22 @@
 
 
 
-#input :[8,5,2,9,5,6,3]
+# #input :[8,5,2,9,5,6,3]
 
-lst = ['NORTH','EAST','WEST','SOUTH','WEST','SOUTH','NORTH','WEST']
-lst2 = []
-def bubble_sort(lst):
-    lst2 = []
-    isSorted = False
-    while not isSorted:
-        isSorted = True
-        for idx in range(len(lst)-1):
-            if lst[idx] == 'NORTH' and lst[idx+1] == 'SOUTH' or lst[idx] == 'EAST' and lst[idx+1] == 'WEST':
+# lst = ['NORTH','EAST','WEST','SOUTH','WEST','SOUTH','NORTH','WEST']
+# lst2 = []
+# def bubble_sort(lst):
+#     lst2 = []
+#     isSorted = False
+#     while not isSorted:
+#         isSorted = True
+#         for idx in range(len(lst)-1):
+#             if lst[idx] == 'NORTH' and lst[idx+1] == 'SOUTH' or lst[idx] == 'EAST' and lst[idx+1] == 'WEST':
                 
-                del lst[idx+1] 
+#                 del lst[idx+1] 
             
-                isSorted = False
-    return lst
+#                 isSorted = False
+#     return lst
                 
             
                                
@@ -132,8 +132,18 @@ def bubble_sort(lst):
         
    
 
-bubble_sort(lst)
-print(lst)
-print(lst2)
-
-
+# bubble_sort(lst)
+# print(lst)
+# print(lst2)
+text = "Hi there"
+from PIL import Image, ImageDraw, ImageFont
+import numpy as np
+myfont = ImageFont.truetype("verdanab.ttf", 12)
+size = myfont.getsize(text)
+img = Image.new("1",size,"black")
+draw = ImageDraw.Draw(img)
+draw.text((0, 0), text, "white", font=myfont)
+pixels = np.array(img, dtype=np.uint8)
+chars = np.array([' ','#'], dtype="U1")[pixels]
+strings = chars.view('U' + str(chars.shape[1])).flatten()
+print( "\n".join(strings))

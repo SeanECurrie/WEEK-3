@@ -6,11 +6,16 @@ def info_input():
         print('\n\nOk, let\'s get started with INCOME from your possible new property: \n')
 
         while True:
+            
             try:
                 rental_income = float(input('Please enter your expected RENTAL INCOME: '))
+                
             except ValueError:
-                print("\nSorry, I didn't understand that.\n")
-                continue
+                
+                    print("\nSorry, I didn't understand that. Please enter a number to proceed.\n")
+                    continue
+            
+
             else:
                 break
         while True:
@@ -167,6 +172,7 @@ def info_input():
 
 while True:
     print("\n ------Welcome to the THIEVES 105 Rental Property ROI Calculator------\n\n")
+    
     user_choice = input("Are you ready to make some money? [Y]es or [NO] ").lower()
     
     if user_choice == 'y':
