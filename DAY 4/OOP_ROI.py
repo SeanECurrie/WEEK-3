@@ -3,16 +3,13 @@ import sys
 
 def roi_input(msg, error_msg):
     while True:
-
-        
         try:
             user_input = input(msg)
             if user_input == 'q':
                 sys.exit('\nThanks for stopping by\n')
             num = float(user_input)
-           
-            
             return num
+            
         except ValueError:
             print(error_msg)
             continue
