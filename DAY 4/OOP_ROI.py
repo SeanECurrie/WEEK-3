@@ -9,13 +9,13 @@ def roi_input(msg, error_msg):
                 sys.exit('\nThanks for stopping by\n')
             num = float(user_input)
             return num
-            
+
         except ValueError:
             print(error_msg)
             continue
         
 def info_input():
-    default_error_message = '\nSorry, I didn\'t understand that. Please enter a valid number.\n'
+    default_error_message = '\nSorry, I didn\'t understand that. Please enter a valid number. Or hit \'q\' to QUIT.\n'
     
     print('\n\nOk, let\'s get started with INCOME from your possible new property: ')
     print('Enter \'q\' at anytime to QUIT the calculator.\n')
