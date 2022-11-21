@@ -1,5 +1,6 @@
 ##########- ROI CALCULATOR WEEKEND PROJECT -##########
 import sys
+from prettytable import PrettyTable
 
 def roi_input(msg, error_msg):
     while True:
@@ -41,18 +42,23 @@ def info_input():
     misc_costs = roi_input('Please enter any OTHER costs: ', default_error_message)
 
     income = rental_income + storage + laundry + misc_income
+    format(income, '.6f')
     expenses = property_tax + property_insurance + property_HOA + property_util + property_repairs + property_CapEx + property_prop_manage + property_mortage
     total_investment = property_down_payment + property_closing + property_rehab + misc_costs
     mcf = income - expenses
     annual_mcf = mcf * 12
     ROI = annual_mcf / total_investment
-    print(f'\n\nHere is some useful information about your potential property and how we got to your ROI:\n\nTotal Income: ${income}\nTotal Expenses: ${expenses}\nMonthly Cash Flow: ${mcf}\nAnnual Cash Flow: ${annual_mcf}\nTotal Investment: ${total_investment}')  
+    x = PrettyTable()
+    x.field_names = ["Total Income", "Total Expenses", "Monthly Cash Flow", "Annual Cash Flow", "Total Investment"]
+    x.add_row([format(income, '.2f'), format(expenses, '.2f'), format(mcf, '2f'), format(annual_mcf, '.2f'), format(total_investment, '.2f')]) 
+    
+    print(f'\n\nWe are all done.\nHere is some useful information about your potential property and how we got to your ROI:\n')  
+    print(x)   
     print(f'\nHere is your expected RETURN ON INVESTMENT: {int(ROI*100)}%\n') 
     print('\nTHANK YOU for using the THIEVES 105 ROI !\nGood luck with your new investment!\n')
     
 while True:
     print("\n ------Welcome to the THIEVES 105 Rental Property ROI Calculator------\n\n")
-    
     user_choice = input("Are you ready to make some money? [Y]es or [NO] ").lower()
     
     if user_choice == 'y':
