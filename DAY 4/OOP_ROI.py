@@ -50,7 +50,7 @@ def info_input():
     ROI = annual_mcf / total_investment
     x = PrettyTable()
     x.field_names = ["Total Income", "Total Expenses", "Monthly Cash Flow", "Annual Cash Flow", "Total Investment"]
-    x.add_row([format(income, '.2f'), format(expenses, '.2f'), format(mcf, '2f'), format(annual_mcf, '.2f'), format(total_investment, '.2f')]) 
+    x.add_row([format(income, '.2f'), format(expenses, '.2f'), format(mcf, '.2f'), format(annual_mcf, '.2f'), format(total_investment, '.2f')]) 
     
     print(f'\n\nWe are all done.\nHere is some useful information about your potential property and how we got to your ROI:\n')  
     print(x)   
